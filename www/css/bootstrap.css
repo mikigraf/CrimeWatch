@@ -6588,6 +6588,13 @@ button.close {
     float: left;
     align-content: center;
     text-align:center;
-    display: inline-grid;
+    overflow: auto;
+    
+}
+
+.wrapteammember{
+    float:left;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
 }
 /*# sourceMappingURL=bootstrap.css.map */
