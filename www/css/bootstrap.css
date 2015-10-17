@@ -6581,4 +6581,13 @@ button.close {
     display: none !important;
   }
 }
+
+
+.teammember {
+    transform:scale(0.3);
+    float: left;
+    align-content: center;
+    text-align:center;
+    display: inline-grid;
+}
 /*# sourceMappingURL=bootstrap.css.map */
