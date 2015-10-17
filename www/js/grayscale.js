@@ -55,5 +55,5 @@ function refreshData() {
     var bound = map.getBounds().getCenter();
  var lat = bound.lat();
 var lng = bound.lng();
-map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng='+lat+'&lat='+lng);
+map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng='+lng+'&lat='+lat);
 }
