@@ -41,7 +41,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(51.3624233,7.3622313), // Wetter (Ruhr)
+        center: new google.maps.LatLng(33.003568, -96.845070), // Dallas
 
         // Disables the default Google Maps UI components
         disableDefaultUI: false,
@@ -58,7 +58,7 @@ function init() {
 
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-    map.data.loadGeoJson('http://www.wiredeck.de/openfiremap/hydrants.geojson');
+   // map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
     
     
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
