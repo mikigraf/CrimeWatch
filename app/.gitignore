@@ -29,12 +29,11 @@ proguard/
 
 # Google Maps Api Key
 google_maps_api.xml
-=======
+
+# Android Studio
 .gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+local.properties
+.idea/*
 .DS_Store
-/build
-/captures
->>>>>>> Stashed changes
+build/
+captures/
