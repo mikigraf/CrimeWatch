@@ -115,7 +115,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
+    background-color: rgb(179, 61, 51);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -161,7 +161,7 @@ a:focus {
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .intro .intro-body .intro-text {
@@ -175,7 +175,7 @@ a:focus {
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 90px;
     }
 
     .intro .intro-body .intro-text {
@@ -186,7 +186,6 @@ a:focus {
 .btn-circle {
     width: 70px;
     height: 70px;
-    margin-top: 15px;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 100%!important;
@@ -303,17 +302,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
+    border: 1px solid rgb(179, 61, 51);
+    color: rgb(179, 61, 51);
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #42dca3;
+    border: 1px solid rgb(179, 61, 51);
     outline: 0;
-    color: #000;
-    background-color: #42dca3;
+    color: #fff;
+    background-color: rgb(179, 61, 51);
 }
 
 ul.banner-social-buttons {

@@ -6598,4 +6598,8 @@ button.close {
     -webkit-transition:0.5s all;
     -moz-transition:0.5s all;
 }
+
+.brand-logo {
+    margin-top:50px;
+}
 /*# sourceMappingURL=bootstrap.css.map */
