@@ -6603,10 +6603,14 @@ button.close {
     margin-top:50px;
 }
 
-.donate{
+#bar1,#bar2,#bar3,#bar4{
     color:black;
 }
 .hidden {
      display:none;
 }
+.donate-button{
+        margin-top: 10px;
+    
+    }
 /*# sourceMappingURL=bootstrap.css.map */
