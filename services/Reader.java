@@ -10,27 +10,8 @@ import java.sql.SQLException;
 
 public class Reader {
 
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql:";
-
-    static final String USER = "test";
-    static final String PASS = "test";
-
     public static void main(String[] args) throws IOException, SQLException {
         System.out.println("Test Excel Sheets");
-        Connection con = null;
-        java.sql.Statement statement = null;
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            System.out.println("Connecting to the database...");
-            con = DriverManager.getConnection(DB_URL, USER, PASS);
-            statement = con.createStatement();
-            // nextLine[3] nextLine[4]
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        CSVReader reader = new CSVReader((new FileReader("2007-2.csv")));
-        //String[] nextLine;
 
         File cvsFolder = new File("/Users/spejs/Documents/Reportsee Database 2007-2010");
         File[] listOfSpreadsheets = cvsFolder.listFiles();
@@ -59,8 +40,7 @@ public class Reader {
                 while((nextLine = csvReader.readNext()) != null){
                     //System.out.println(nextLine[1] + " CITY: " + nextLine[2]);
                     if(nextLine[2].contains("DALLAS, TX")){
-                        String sql = "INSERT INTO   ";
-                        statement.executeUpdate(sql);
+                        System.out.println("INSERT INTO crimes (TYPE,CITY,X,Y,DETAILS) VALUES (\"" + nextLine[1] + "\",\"" + nextLine[2] + "\"," + nextLine[3] + "," + nextLine[4] + ",\"" + nextLine[6] + "\");");
                         //System.out.println("mMap.addCircle(new CircleOptions().center(new LatLng(" +  nextLine[3] + ","+ nextLine[4]+")).radius(1000));");
                         //System.out.println("mMap.addMarker(new MarkerOptions().position(new LatLng(" + nextLine[3] + "," + nextLine[4] + ")).title(\"" + nextLine[1] + "\").visible(false).snippet(\""+ nextLine[1] +"\"));");
                         Dallas++;
