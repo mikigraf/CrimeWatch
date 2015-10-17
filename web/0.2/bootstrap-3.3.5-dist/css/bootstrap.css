@@ -1433,7 +1433,7 @@ ol ol {
   margin-left: -5px;
   list-style: none;
 }
-.list-inline > {
+.list-inline > li {
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
@@ -6797,16 +6797,4 @@ button.close {
     display: none !important;
   }
 }
-
-.teammember {
-    transform:scale(0.3);
-    float: left;
-    align-content: center;
-    text-align:center;
-}
-.logo{
-   
-    
-}
 /*# sourceMappingURL=bootstrap.css.map */
-
