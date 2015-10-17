@@ -53,7 +53,7 @@ function init() {
     };
 
     // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
+    // We are using a div with id="map" seen below in the <body>s
     var mapElement = document.getElementById('map');
 
     // Create the Google Map using out element and options defined above
