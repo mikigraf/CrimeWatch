@@ -32,41 +32,28 @@ $('.navbar-collapse ul li a').click(function() {
 // Google Maps Scripts
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
-
+var map;
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
         zoom: 15,
-
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(51.3624233,7.3622313), // Wetter (Ruhr)
-
+        center: new google.maps.LatLng(33.003568, -96.845070), // Dallas
         // Disables the default Google Maps UI components
         disableDefaultUI: false,
         draggable: true,
-
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
-      
     };
-
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
-
-    // Create the Google Map using out element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
-    map.data.loadGeoJson('http://www.wiredeck.de/openfiremap/hydrants.geojson');
-    
-    
+    map = new google.maps.Map(mapElement, mapOptions);
+   // map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
+    google.maps.event.addDomListener(map, 'dragend', refreshData);
+    google.maps.event.addDomListener(map, 'dblclick', refreshData);
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'img/map-marker-dark.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
-    var beachMarker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        icon: image
-    });
+}
+function refreshData() {
+    var bound = map.getBounds().getCenter();
+ var lat = bound.lat();
+var lng = bound.lng();
+map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng='+lng+'&lat='+lat);
 }
