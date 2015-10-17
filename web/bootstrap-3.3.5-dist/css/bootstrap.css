@@ -1433,7 +1433,7 @@ ol ol {
   margin-left: -5px;
   list-style: none;
 }
-.list-inline > li {
+.list-inline > {
   display: inline-block;
   padding-right: 5px;
   padding-left: 5px;
@@ -6798,3 +6798,9 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+.logo{
+   
+    
+}
