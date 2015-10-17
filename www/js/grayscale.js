@@ -41,10 +41,10 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: new google.maps.LatLng(51.3624233,7.3622313), // Wetter (Ruhr)
 
         // Disables the default Google Maps UI components
-        disableDefaultUI: true,
+        disableDefaultUI: false,
         draggable: true,
 
         // How you would like to style the map. 
@@ -58,7 +58,9 @@ function init() {
 
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-
+    map.data.loadGeoJson('http://www.wiredeck.de/openfiremap/hydrants.geojson');
+    
+    
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker-dark.png';
     var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
