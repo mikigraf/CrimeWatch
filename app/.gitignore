@@ -25,3 +25,6 @@ proguard/
 
 # Log Files
 *.log
+
+# Google Maps Api Key
+google_maps_api.xml
