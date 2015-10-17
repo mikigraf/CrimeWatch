@@ -1,7 +1,9 @@
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+app/.gradle
+app/local.properties
+app/.idea/workspace.xml
+app/.idea/libraries
 .DS_Store
-/build
-/captures
+app/build
+app/captures
+app/app/src/main/res/values/google_maps_api.xml
+app/app/src/debug/res/values/google_maps_api.xml
