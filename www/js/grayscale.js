@@ -32,7 +32,7 @@ $('.navbar-collapse ul li a').click(function() {
 // Google Maps Scripts
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
-
+var map;
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -45,12 +45,15 @@ function init() {
         draggable: true,
     };
     var mapElement = document.getElementById('map');
-    var map = new google.maps.Map(mapElement, mapOptions);
+    map = new google.maps.Map(mapElement, mapOptions);
    // map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
     google.maps.event.addDomListener(map, 'dragend', refreshData);
     google.maps.event.addDomListener(map, 'dblclick', refreshData);
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
 }
 function refreshData() {
-    alert("test");
+    var bound = map.getBounds().getCenter();
+ var lat = bound.lat();
+var lng = bound.lng();
+map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng='+lat+'&lat='+lng);
 }
