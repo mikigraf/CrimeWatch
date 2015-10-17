@@ -5,7 +5,7 @@
  */
 
 // jQuery to collapse the navbar on scroll
-$(window).scroll(function() {
+$(window).scroll(function () {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
@@ -14,8 +14,8 @@ $(window).scroll(function() {
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
+$(function () {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -25,7 +25,7 @@ $(function() {
 });
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+$('.navbar-collapse ul li a').click(function () {
     $('.navbar-toggle:visible').click();
 });
 
@@ -33,6 +33,7 @@ $('.navbar-collapse ul li a').click(function() {
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 var map;
+
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
@@ -46,14 +47,71 @@ function init() {
     };
     var mapElement = document.getElementById('map');
     map = new google.maps.Map(mapElement, mapOptions);
-   // map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
+    map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
     google.maps.event.addDomListener(map, 'dragend', refreshData);
-    google.maps.event.addDomListener(map, 'dblclick', refreshData);
-    // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
+
+    var imgArrest = 'img/';
+    var imgArson = 'img/';
+    var imgAssault = 'img/';
+    var imgBurglay = 'img/';
+    var imgRobbery = 'img/';
+    var imgShooting = 'img/';
+    var imgTheft = 'img/';
+    var imgVandalism = 'img/';
+    map.data.setStyle(function (feature) {
+            var type = feature.getOwnProperty('type');
+            switch (type) {
+                case arrest:
+                    return ({
+                        icon: imgArrest,
+                        title: 'Arrest'
+                    });
+                case arson:
+                    return ({
+                        icon: imgArson,
+                        title: 'Arson'
+                    });
+                case assault:
+                    return ({
+                        icon: imgAssault,
+                        title: 'Assault'
+                    });
+                case burglay:
+                    return ({
+                        icon: imgBurglay,
+                        title: 'Burglay'
+                    });
+                case robbery:
+                    return ({
+                        icon: imgRobbery,
+                        title: 'Robbery'
+                    });
+                case shooting:
+                    return ({
+                        icon: imgShooting,
+                        title: 'Shooting'
+                    });
+                case theft:
+                    return ({
+                        icon: imgTheft,
+                        title: 'Theft'
+                    });
+                case vandalism:
+                    return ({
+                        icon: imgVandalism,
+                        title: 'Vandalism
+                    });
+                default:
+                    console.log("No Type defined in GeoJSON");
+                    break;
+            }
+        })
+        // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
 }
+
 function refreshData() {
     var bound = map.getBounds().getCenter();
- var lat = bound.lat();
-var lng = bound.lng();
-map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng='+lng+'&lat='+lat);
+    var lat = bound.lat();
+    var lng = bound.lng();
+    map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=' + lng + '&lat=' + lat);
 }
