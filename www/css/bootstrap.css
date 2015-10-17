@@ -6602,4 +6602,11 @@ button.close {
 .brand-logo {
     margin-top:50px;
 }
+
+.donate{
+    color:black;
+}
+.hidden {
+     display:none;
+}
 /*# sourceMappingURL=bootstrap.css.map */
