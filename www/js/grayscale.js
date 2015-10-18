@@ -34,6 +34,7 @@ $('.navbar-collapse ul li a').click(function () {
 google.maps.event.addDomListener(window, 'load', init);
 var map;
 var infowindow = new google.maps.InfoWindow();
+var defaultIcon
 
 function init() {
     // Basic options for a simple Google Map
@@ -43,7 +44,7 @@ function init() {
         // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(33.003568, -96.845070), // Dallas
         // Disables the default Google Maps UI components
-        disableDefaultUI: false,
+        disableDefaultUI: true,
         draggable: true,
     };
     var mapElement = document.getElementById('map');
@@ -59,7 +60,7 @@ function init() {
     var imgShooting = 'img/shooting.png';
     var imgTheft = 'img/theft.png';
     var imgVandalism = 'img/vandalism.png';
-    var defaultIcon = 'img/map-marker-dark.png'
+    defaultIcon = 'img/map-marker-dark.png'
     map.data.setStyle(function (feature) {
             var type = feature.getProperty('type');
             switch (type) {
@@ -126,8 +127,8 @@ function init() {
     document.getElementById('submit').addEventListener('click', function () {
         geocodeAddress(geocoder, map);
     });
-    document.getElementById('address').addEventListener('keyup', function (event) {
-        if (event.keyCode === 13 || event.which === 13) {
+    document.getElementById('address').addEventListener('keyup', function (e) {
+        if (e.keyCode === 13 || e.which === 13) {
             geocodeAddress(geocoder, map);
         }
     });
@@ -136,7 +137,7 @@ function init() {
         var type = event.feature.getProperty('type');
         var city = event.feature.getProperty('city');
         var details = event.feature.getProperty('details');
-        infowindow.setContent('<h4 style="color: #444">' + type + '</h4><p style="color: #444; font-size: 16px"><strong>city: </strong>' + city + '<br><strong>details: </strong>' + details +'</p>');
+        infowindow.setContent('<h4 style="color: #444">' + type + '</h4><p style="color: #444; font-size: 16px"><strong>city: </strong>' + city + '<br><strong>details: </strong>' + details + '</p>');
         infowindow.setPosition(event.feature.getGeometry().get());
         infowindow.setOptions({
             pixelOffset: new google.maps.Size(0, -30)
@@ -169,7 +170,8 @@ function geocodeAddress(geocoder, resultsMap) {
             resultsMap.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
                 map: resultsMap,
-                position: results[0].geometry.location
+                position: results[0].geometry.location,
+                icon: defaultIcon
             });
         } else {
             alert('Geocode was not successful for the following reason: ' + status);

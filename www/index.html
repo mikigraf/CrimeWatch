@@ -68,11 +68,11 @@
                     </li>
                 </ul>
                 <form class="navbar-form navbar-right" action="#findCrimes" role="search">
-        <div class="form-group">
-          <input id="address" type="search" class="form-control" placeholder="Search for your town">
-        </div>
-        <button id="submit" type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
-      </form>
+                    <div class="form-group">
+                        <input id="address" type="text" class="form-control" placeholder="Search for your town">
+                    </div>
+                    <button id="submit" type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </form>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -140,7 +140,7 @@
             </div>
         </div>
     </section>
- <div id="map"></div>
+    <div id="map"></div>
 
 
 
@@ -148,30 +148,30 @@
     <!-- App Section -->
     <section id="app" class="content-section text-center">
         <div class="app-section">
-        <div class="container">
+            <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <table>
                         <tr>
                             <td>
-                            <h2>Download CrimeWatch</h2>
-                        <p>Get our app for free:</p>
-                    <button href="#bar5" class="btn btn-default btn-lg" data-toggle="collapse" display="inline">Visit Download Page</button>
+                                <h2>Download CrimeWatch</h2>
+                                <p>Get our app for free:</p>
+                                <button href="#bar5" class="btn btn-default btn-lg" data-toggle="collapse" display="inline">Visit Download Page</button>
                                 <div id="bar5" class="collapse">
-                                    <img src="img/braintree.jpg"  alt ="TOO EASY TO BE TRUE" width="50%" height="50%">
-                    </div>
-                            </td>
-                        <td >
-                                    <img src="img/app_screen1.png" alt="appscreen1" width="80%" height="80%">
+                                    <img src="img/braintree.jpg" alt="TOO EASY TO BE TRUE" width="50%" height="50%">
+                                </div>
                             </td>
                             <td>
-                                    <img src="img/app_screen2.png" alt="appscreen2" width="80%" height="80%">
-                        </td>
+                                <img src="img/app_screen1.png" alt="appscreen1" width="80%">
+                            </td>
+                            <td>
+                                <img src="img/app_screen2.png" alt="appscreen2" width="80%">
+                            </td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
-    
+
     </section>
 
 
@@ -193,71 +193,75 @@
                                 <img class="teammember" src="img/chris.jpg" alt="dev1" width="30%" height="30%">
                                 <figcaption><a href="https://github.com/wirebug" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
 
-                        <p>   <div class="donate-button">  
-                            <button href="#bar1" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
-                                    </div>
-                                <div id="bar1" class="collapse">
-
                                     <p>
-                                    <form id="checkout1" method="post" action="/checkout">
-                                        <div id="payment-form1"></div>
-                                            <input type="submit" value="Pay 10€">
-                                    </form>
+                                        <div class="donate-button">
+                                            <button href="#bar1" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
+                                        </div>
+                                        <div id="bar1" class="collapse">
 
-                                    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
-                                    <script>
-                                    // We generated a client token for you so you can test out this code
-                                    // immediately. In a production-ready integration, you will need to
-                                    // generate a client token on your server (see section below).
-                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+                                            <p>
+                                                <form id="checkout1" method="post" action="/checkout">
+                                                    <div id="payment-form1"></div>
+                                                    <input type="submit" value="Pay 10€">
+                                                </form>
 
-                                    braintree.setup(clientToken, "dropin", {
-                                      container: "payment-form1"
-                                    });
-                                    </script>
+                                                <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+                                                <script>
+                                                    // We generated a client token for you so you can test out this code
+                                                    // immediately. In a production-ready integration, you will need to
+                                                    // generate a client token on your server (see section below).
+                                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+
+                                                    braintree.setup(clientToken, "dropin", {
+                                                        container: "payment-form1"
+                                                    });
+
+                                                </script>
+                                            </p>
+                                        </div>
                                     </p>
-                                </div>
-                                </p>
                                 </figcaption>
                             </figure>
-                         </li> 
-                        </div>
-                    
+                        </li>
+                    </div>
+
                     <div class="wrapteammember">
                         <li>
                             <figure>
                                 <img class="teammember" src="img/silas.jpg" alt="dev1" width="30%" height="30%">
                                 <figcaption><a href="https://github.com/simah002" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
 
-                        <p>   <div class="donate-button">  
-                            <button href="#bar2" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
-                                    </div>
-                                <div id="bar2" class="collapse">
-
                                     <p>
-                                    <form id="checkout2" method="post" action="/checkout">
-                                        <div id="payment-form2"></div>
-                                            <input type="submit" value="Pay 10€">
-                                    </form>
+                                        <div class="donate-button">
+                                            <button href="#bar2" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
+                                        </div>
+                                        <div id="bar2" class="collapse">
 
-                                    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
-                                    <script>
-                                    // We generated a client token for you so you can test out this code
-                                    // immediately. In a production-ready integration, you will need to
-                                    // generate a client token on your server (see section below).
-                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+                                            <p>
+                                                <form id="checkout2" method="post" action="/checkout">
+                                                    <div id="payment-form2"></div>
+                                                    <input type="submit" value="Pay 10€">
+                                                </form>
 
-                                    braintree.setup(clientToken, "dropin", {
-                                      container: "payment-form2"
-                                    });
-                                    </script>
+                                                <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+                                                <script>
+                                                    // We generated a client token for you so you can test out this code
+                                                    // immediately. In a production-ready integration, you will need to
+                                                    // generate a client token on your server (see section below).
+                                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+
+                                                    braintree.setup(clientToken, "dropin", {
+                                                        container: "payment-form2"
+                                                    });
+
+                                                </script>
+                                            </p>
+                                        </div>
                                     </p>
-                                </div>
-                                </p>
                                 </figcaption>
                             </figure>
-                         </li> 
-                        </div>
+                        </li>
+                    </div>
 
                     <div class="wrapteammember">
                         <li>
@@ -265,35 +269,37 @@
                                 <img class="teammember" src="img/dev3.jpg" alt="dev1" width="30%" height="30%">
                                 <figcaption><a href="https://github.com/spejss" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
 
-                        <p>   <div class="donate-button">  
-                            <button href="#bar3" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
-                                    </div>
-                                <div id="bar3" class="collapse">
-
                                     <p>
-                                    <form id="checkout3" method="post" action="/checkout">
-                                        <div id="payment-form3"></div>
-                                            <input type="submit" value="Pay 10€">
-                                    </form>
+                                        <div class="donate-button">
+                                            <button href="#bar3" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
+                                        </div>
+                                        <div id="bar3" class="collapse">
 
-                                    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
-                                    <script>
-                                    // We generated a client token for you so you can test out this code
-                                    // immediately. In a production-ready integration, you will need to
-                                    // generate a client token on your server (see section below).
-                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+                                            <p>
+                                                <form id="checkout3" method="post" action="/checkout">
+                                                    <div id="payment-form3"></div>
+                                                    <input type="submit" value="Pay 10€">
+                                                </form>
 
-                                    braintree.setup(clientToken, "dropin", {
-                                      container: "payment-form3"
-                                    });
-                                    </script>
+                                                <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+                                                <script>
+                                                    // We generated a client token for you so you can test out this code
+                                                    // immediately. In a production-ready integration, you will need to
+                                                    // generate a client token on your server (see section below).
+                                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+
+                                                    braintree.setup(clientToken, "dropin", {
+                                                        container: "payment-form3"
+                                                    });
+
+                                                </script>
+                                            </p>
+                                        </div>
                                     </p>
-                                </div>
-                                </p>
                                 </figcaption>
                             </figure>
-                         </li> 
-                        </div>
+                        </li>
+                    </div>
 
                     <div class="wrapteammember">
                         <li>
@@ -301,35 +307,37 @@
                                 <img class="teammember" src="img/dev4.jpg" alt="dev1" width="30%" height="30%">
                                 <figcaption><a href="https://github.com/skai92" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
 
-                        <p>   <div class="donate-button">  
-                            <button href="#bar4" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
-                                    </div>
-                                <div id="bar4" class="collapse">
-
                                     <p>
-                                    <form id="checkout4" method="post" action="/checkout">
-                                        <div id="payment-form4"></div>
-                                            <input type="submit" value="Pay 10€">
-                                    </form>
+                                        <div class="donate-button">
+                                            <button href="#bar4" class="btn btn-default btn-lg" data-toggle="collapse"><i class="fa fa-heart fa-fw"></i> <span class="network-name">Donate</span></button>
+                                        </div>
+                                        <div id="bar4" class="collapse">
 
-                                    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
-                                    <script>
-                                    // We generated a client token for you so you can test out this code
-                                    // immediately. In a production-ready integration, you will need to
-                                    // generate a client token on your server (see section below).
-                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+                                            <p>
+                                                <form id="checkout4" method="post" action="/checkout">
+                                                    <div id="payment-form4"></div>
+                                                    <input type="submit" value="Pay 10€">
+                                                </form>
 
-                                    braintree.setup(clientToken, "dropin", {
-                                      container: "payment-form4"
-                                    });
-                                    </script>
+                                                <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+                                                <script>
+                                                    // We generated a client token for you so you can test out this code
+                                                    // immediately. In a production-ready integration, you will need to
+                                                    // generate a client token on your server (see section below).
+                                                    var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyZjgyNjdjNWY2N2U2ZTMxZjRhODE4MjZkNDc1YjkxMjRkNTY3ZjI5ODQ0NzFiNDJlNWJjNDU4N2IyOWM2Y2Y1fGNyZWF0ZWRfYXQ9MjAxNS0xMC0xN1QyMDoxMDo0Mi4yMzIyMTIwMDIrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+
+                                                    braintree.setup(clientToken, "dropin", {
+                                                        container: "payment-form4"
+                                                    });
+
+                                                </script>
+                                            </p>
+                                        </div>
                                     </p>
-                                </div>
-                                </p>
                                 </figcaption>
                             </figure>
-                         </li> 
-                        </div>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
