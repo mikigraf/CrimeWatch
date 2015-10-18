@@ -119,7 +119,7 @@ function init() {
                     break;
             }
         })
-        // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
+        // Custom Map Marker Icon - Customize the map-marker.png file to customizes your icon
     var geocoder = new google.maps.Geocoder();
 
     document.getElementById('submit').addEventListener('click', function () {
