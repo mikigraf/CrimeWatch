@@ -80,7 +80,7 @@ Braintree_Configuration::privateKey('300db931c84fcaf9c3e0a17edc7b16cb');
                     <div class="form-group">
                         <input id="address" type="text" class="form-control" placeholder="Search for your town">
                     </div>
-                    <button id="submit" type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    <button id="submit" type="button" class="btn btn-default btn-white"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <!-- /.navbar-collapse -->
