@@ -34,7 +34,7 @@ $('.navbar-collapse ul li a').click(function () {
 google.maps.event.addDomListener(window, 'load', init);
 var map;
 var infowindow = new google.maps.InfoWindow();
-var defaultIcon
+var defaultIcon;
 
 function init() {
     // Basic options for a simple Google Map
@@ -51,6 +51,7 @@ function init() {
     map = new google.maps.Map(mapElement, mapOptions);
     map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
     google.maps.event.addDomListener(map, 'dragend', refreshData);
+    
 
     var imgArrest = 'img/arrest.png';
     var imgArson = 'img/arson.png';
