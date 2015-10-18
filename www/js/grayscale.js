@@ -136,6 +136,9 @@ function init() {
       var type = event.feature.getProperty('type');
       var city = event.feature.getProperty('city');
     var details = event.feature.getProperty('details');
+        console.log(type);
+        console.log(city);
+        console.log(details);
       infowindow.setContent("<b>" + type + "</b><br> city:" +city + "<br> details" + details);
       infowindow.setPosition(event.feature.getGeometry().get());
       infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
