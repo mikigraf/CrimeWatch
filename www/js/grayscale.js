@@ -99,7 +99,7 @@ function init() {
                 case vandalism:
                     return ({
                         icon: imgVandalism,
-                        title: 'Vandalism
+                        title: 'Vandalism'
                     });
                 default:
                     console.log("No Type defined in GeoJSON");
