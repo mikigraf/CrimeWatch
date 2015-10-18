@@ -61,7 +61,6 @@ function init() {
     var defaultIcon = 'img/map-marker-dark.png'
     map.data.setStyle(function (feature) {
             var type = feature.getProperty('type');
-        console.log(type);
             switch (type) {
                 case "Arrest":
                     return ({
@@ -98,8 +97,8 @@ function init() {
                         icon: imgShooting,
                         title: 'Shooting'
                     });
-                     break;
-                case  "Theft":
+                    break;
+                case "Theft":
                     return ({
                         icon: imgTheft,
                         title: 'Theft'
@@ -123,9 +122,14 @@ function init() {
         // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var geocoder = new google.maps.Geocoder();
 
-  document.getElementById('submit').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
-  });
+    document.getElementById('submit').addEventListener('click', function () {
+        geocodeAddress(geocoder, map);
+    });
+    document.getElementById('address').addEventListener('keyup', function (event) {
+        if (event.keyCode === 13 || event.which === 13) {
+            geocodeAddress(geocoder, map);
+        }
+    });
 }
 
 function refreshData() {
@@ -136,23 +140,24 @@ function refreshData() {
 }
 
 function address(e) {
-    if (e.keyCode === 13)
     geocodeAddress(geocoder, map);
+    return false;
 }
 
 
 function geocodeAddress(geocoder, resultsMap) {
-  var address = document.getElementById('address').value;
-  geocoder.geocode({'address': address}, function(results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      resultsMap.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: resultsMap,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
+    var address = document.getElementById('address').value;
+    geocoder.geocode({
+        'address': address
+    }, function (results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: resultsMap,
+                position: results[0].geometry.location
+            });
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
 }
-
