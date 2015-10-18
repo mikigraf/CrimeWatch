@@ -59,7 +59,7 @@ function init() {
     var imgTheft = 'img/';
     var imgVandalism = 'img/';
     map.data.setStyle(function (feature) {
-            var type = feature.getOwnProperty('type');
+            var type = feature.getProperty('type');
             switch (type) {
                 case arrest:
                     return ({
