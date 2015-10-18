@@ -135,7 +135,10 @@ function refreshData() {
     map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=' + lng + '&lat=' + lat);
 }
 
-
+function address(e) {
+    if (e.keyCode === 13)
+    geocodeAddress(geocoder, map);
+}
 
 
 function geocodeAddress(geocoder, resultsMap) {
