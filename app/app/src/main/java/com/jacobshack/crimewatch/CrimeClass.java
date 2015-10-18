@@ -33,24 +33,24 @@ public class CrimeClass {
     }
 
     public BitmapDescriptor getIcon() {
-        if(mType == "Arrest") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
-        } else if(mType == "Arson") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
-        } else if(mType == "Assault") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
-        } else if(mType == "Burglary") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
-        } else if(mType == "Robbery") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
-        } else if(mType == "Shooting") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
-        } else if(mType == "Theft") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
-        } else if(mType == "Vandalism") {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
+        if(mType.equals("Arrest")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.arrest);
+        } else if(mType.equals("Arson")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.arson);
+        } else if(mType.equals("Assault")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.assault);
+        } else if(mType.equals("Burglary")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.burglary);
+        } else if(mType.equals("Robbery")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.robbery);
+        } else if(mType.equals("Shooting")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.shooting);
+        } else if(mType.equals("Theft")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.theft);
+        } else if(mType.equals("Vandalism")) {
+            return BitmapDescriptorFactory.fromResource(R.drawable.vandalism);
         } else {
-            return BitmapDescriptorFactory.fromResource(R.drawable.criminal28);
+            return BitmapDescriptorFactory.fromResource(R.drawable.other);
         }
     }
 }

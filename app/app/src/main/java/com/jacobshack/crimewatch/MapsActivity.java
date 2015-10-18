@@ -1,16 +1,15 @@
 package com.jacobshack.crimewatch;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.net.URL;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -34,6 +33,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(currentLocation).title("You"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15));
 
-        new RequestClass(mMap, currentLocation).execute();
+        new RequestClass(mMap, currentLocation, getApplicationContext()).execute();
+
+        mMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
+            @Override
+            public void onCameraChange(CameraPosition cameraPosition) {
+                new RequestClass(mMap, mMap.getCameraPosition().target, getApplicationContext()).execute();
+            }
+        });
     }
 }

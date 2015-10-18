@@ -21,8 +21,8 @@ public class ApiClass {
     }
 
     public String getCrimesFromApi(Double lat, Double lng) throws IOException {
-        Log.i(LOG_TAG, API_URL + "?lat=" + lat + "&lng=" + lng);
-        // FIXME: 17.10.2015
+        // FIXME: 17.10.2015 swap lng and lat here
+        Log.i(LOG_TAG, API_URL + "?lng=" + lat + "&lat=" + lng);
         return doGetRequest(API_URL + "?lng=" + lat + "&lat=" + lng);
     }
 }
