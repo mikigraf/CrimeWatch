@@ -61,42 +61,42 @@ function init() {
     map.data.setStyle(function (feature) {
             var type = feature.getProperty('type');
             switch (type) {
-                case arrest:
+                case 'arrest':
                     return ({
                         icon: imgArrest,
                         title: 'Arrest'
                     });
-                case arson:
+                case 'arson':
                     return ({
                         icon: imgArson,
                         title: 'Arson'
                     });
-                case assault:
+                case 'assault':
                     return ({
                         icon: imgAssault,
                         title: 'Assault'
                     });
-                case burglay:
+                case 'burglay':
                     return ({
                         icon: imgBurglay,
                         title: 'Burglay'
                     });
-                case robbery:
+                case 'robbery':
                     return ({
                         icon: imgRobbery,
                         title: 'Robbery'
                     });
-                case shooting:
+                case 'shooting':
                     return ({
                         icon: imgShooting,
                         title: 'Shooting'
                     });
-                case theft:
+                case 'theft':
                     return ({
                         icon: imgTheft,
                         title: 'Theft'
                     });
-                case vandalism:
+                case 'vandalism':
                     return ({
                         icon: imgVandalism,
                         title: 'Vandalism'
