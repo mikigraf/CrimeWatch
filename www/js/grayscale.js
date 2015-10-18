@@ -60,6 +60,7 @@ function init() {
     var imgVandalism = 'img/';
     map.data.setStyle(function (feature) {
             var type = feature.getProperty('type');
+        console.log(type);
             switch (type) {
                 case 'arrest':
                     return ({
