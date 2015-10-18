@@ -33,6 +33,7 @@ $('.navbar-collapse ul li a').click(function () {
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 var map;
+var infowindow = new google.maps.InfoWindow();
 
 function init() {
     // Basic options for a simple Google Map
@@ -130,7 +131,19 @@ function init() {
             geocodeAddress(geocoder, map);
         }
     });
+    
+    map.data.addListener('click', function(event) {
+      var type = event.feature.getProperty('type');
+      var city = event.feature.getProperty('city');
+    var details = event.feature.getProperty('details');
+      infowindow.setContent("<b>" + type + "</b><br> city:" +city + "<br> details" + details);
+      infowindow.setPosition(event.feature.getGeometry().get());
+      infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+      infowindow.open(map);
+  });  
 }
+
+
 
 function refreshData() {
     var bound = map.getBounds().getCenter();
