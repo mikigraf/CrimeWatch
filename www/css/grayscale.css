@@ -464,7 +464,3 @@ input[type="search"]:focus {
     border-radius: 0;
     border: 1px solid #B33D33;
 }
-
-#map {
-    color: #444;!important
-}
