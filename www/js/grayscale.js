@@ -136,7 +136,7 @@ function init() {
         var type = event.feature.getProperty('type');
         var city = event.feature.getProperty('city');
         var details = event.feature.getProperty('details');
-        infowindow.setContent('<h5 style="color: #444">' + type + '</h5><p style="color: #444; font-size: 12px"><strong>city: </strong>' + city + '<br><strong>details: </strong>' + details +'</p>');
+        infowindow.setContent('<h5 style="color: #444">' + type + '</h5><p style="color: #444; font-size: 16px"><strong>city: </strong>' + city + '<br><strong>details: </strong>' + details +'</p>');
         infowindow.setPosition(event.feature.getGeometry().get());
         infowindow.setOptions({
             pixelOffset: new google.maps.Size(0, -30)
