@@ -455,4 +455,13 @@ body {
 	color: rgb(179, 61, 51);
 }
 
+input[type="search"] {
+    border-radius: 0;
+    border: 1px solid #444;
+}
+
+input[type="search"]:focus {
+    border-radius: 0;
+    border: 1px solid #B33D33;
+}
 
