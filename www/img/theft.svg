@@ -15,7 +15,10 @@
    viewBox="0 0 32 32"
    id="svg2"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="theft.svg">
+   sodipodi:docname="theft.svg"
+   inkscape:export-filename="C:\Users\Christoph\Documents\CrimeWatch\www\img\theft.png"
+   inkscape:export-xdpi="135"
+   inkscape:export-ydpi="135">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -24,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,9 +46,9 @@
      inkscape:window-height="657"
      id="namedview6"
      showgrid="false"
-     inkscape:zoom="14.75"
-     inkscape:cx="15.074745"
-     inkscape:cy="13.508502"
+     inkscape:zoom="7.375"
+     inkscape:cx="-3.3965466"
+     inkscape:cy="7.7158373"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
