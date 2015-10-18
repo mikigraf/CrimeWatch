@@ -50,57 +50,70 @@ function init() {
     map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
     google.maps.event.addDomListener(map, 'dragend', refreshData);
 
-    var imgArrest = 'img/';
-    var imgArson = 'img/';
-    var imgAssault = 'img/';
-    var imgBurglay = 'img/';
-    var imgRobbery = 'img/';
-    var imgShooting = 'img/';
-    var imgTheft = 'img/';
-    var imgVandalism = 'img/';
+    var imgArrest = 'img/arrest.png';
+    var imgArson = 'img/arson.png';
+    var imgAssault = 'img/assault.png';
+    var imgBurglary = 'img/burglary.png';
+    var imgRobbery = 'img/robbery.png';
+    var imgShooting = 'img/shooting.png';
+    var imgTheft = 'img/theft.png';
+    var imgVandalism = 'img/vandalism.png';
+    var defaultIcon = 'img/map-marker-dark.png'
     map.data.setStyle(function (feature) {
             var type = feature.getProperty('type');
         console.log(type);
             switch (type) {
-                case 'arrest':
+                case "Arrest":
                     return ({
                         icon: imgArrest,
-                        title: 'Arrest'
+                        title: type
                     });
-                case 'arson':
+                    break;
+                case "Arson":
                     return ({
                         icon: imgArson,
-                        title: 'Arson'
+                        title: type
                     });
-                case 'assault':
+                    break;
+                case "Assault":
                     return ({
                         icon: imgAssault,
                         title: 'Assault'
                     });
-                case 'burglay':
+                    break;
+                case "Burglary":
                     return ({
-                        icon: imgBurglay,
+                        icon: imgBurglary,
                         title: 'Burglay'
                     });
-                case 'robbery':
+                    break;
+                case "Robbery":
                     return ({
                         icon: imgRobbery,
                         title: 'Robbery'
                     });
-                case 'shooting':
+                    break;
+                case "Shooting":
                     return ({
                         icon: imgShooting,
                         title: 'Shooting'
                     });
-                case 'theft':
+                     break;
+                case  "Theft":
                     return ({
                         icon: imgTheft,
                         title: 'Theft'
                     });
-                case 'vandalism':
+                    break;
+                case "Vandalism":
                     return ({
                         icon: imgVandalism,
                         title: 'Vandalism'
+                    });
+                case "Other":
+                    return ({
+                        icon: defaultIcon,
+                        title: type
                     });
                 default:
                     console.log("No Type defined in GeoJSON");
