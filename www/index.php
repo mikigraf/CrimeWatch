@@ -209,7 +209,7 @@ Braintree_Configuration::privateKey('300db931c84fcaf9c3e0a17edc7b16cb');
                                         <div id="bar1" class="collapse">
 
                                             <p>
-                                                <form id="checkout1" method="post" action="/checkout">
+                                                <form id="checkout1" method="post" action="pay.php">
                                                     <div id="payment-form1"></div>
                                                     <input type="submit" value="Pay 10€">
                                                 </form>
@@ -247,7 +247,7 @@ Braintree_Configuration::privateKey('300db931c84fcaf9c3e0a17edc7b16cb');
                                         <div id="bar2" class="collapse">
 
                                             <p>
-                                                <form id="checkout2" method="post" action="/checkout">
+                                                <form id="checkout2" method="post" action="pay.php">
                                                     <div id="payment-form2"></div>
                                                     <input type="submit" value="Pay 10€">
                                                 </form>
@@ -285,7 +285,7 @@ Braintree_Configuration::privateKey('300db931c84fcaf9c3e0a17edc7b16cb');
                                         <div id="bar3" class="collapse">
 
                                             <p>
-                                                <form id="checkout3" method="post" action="/checkout">
+                                                <form id="checkout3" method="post" action="pay.php">
                                                     <div id="payment-form3"></div>
                                                     <input type="submit" value="Pay 10€">
                                                 </form>
@@ -323,7 +323,7 @@ Braintree_Configuration::privateKey('300db931c84fcaf9c3e0a17edc7b16cb');
                                         <div id="bar4" class="collapse">
 
                                             <p>
-                                                <form id="checkout4" method="post" action="/checkout">
+                                                <form id="checkout4" method="post" action="pay.php">
                                                     <div id="payment-form4"></div>
                                                     <input type="submit" value="Pay 10€">
                                                 </form>
