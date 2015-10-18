@@ -51,7 +51,7 @@ function init() {
     map = new google.maps.Map(mapElement, mapOptions);
     map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=33.003568&lat=-96.845070');
     google.maps.event.addDomListener(map, 'dragend', refreshData);
-    
+
 
     var imgArrest = 'img/arrest.png';
     var imgArson = 'img/arson.png';
@@ -70,43 +70,36 @@ function init() {
                         icon: imgArrest,
                         title: type
                     });
-                    break;
                 case "Arson":
                     return ({
                         icon: imgArson,
                         title: type
                     });
-                    break;
                 case "Assault":
                     return ({
                         icon: imgAssault,
                         title: 'Assault'
                     });
-                    break;
                 case "Burglary":
                     return ({
                         icon: imgBurglary,
                         title: 'Burglay'
                     });
-                    break;
                 case "Robbery":
                     return ({
                         icon: imgRobbery,
                         title: 'Robbery'
                     });
-                    break;
                 case "Shooting":
                     return ({
                         icon: imgShooting,
                         title: 'Shooting'
                     });
-                    break;
                 case "Theft":
                     return ({
                         icon: imgTheft,
                         title: 'Theft'
                     });
-                    break;
                 case "Vandalism":
                     return ({
                         icon: imgVandalism,
@@ -138,7 +131,7 @@ function init() {
         var type = event.feature.getProperty('type');
         var city = event.feature.getProperty('city');
         var details = event.feature.getProperty('details');
-        infowindow.setContent('<h4 style="color: #444">' + type + '</h4><h5 style="color: #444">city: </h5><p style="font-size: 14px; color: #444">' + city + '</p><h5 style="color: #444"><br><strong>details: </strong></h5><p style="font-size: 14px; color: #444">' + details + '</p>');
+        infowindow.setContent('<h4 style="color: #444">' + type + '</h4><h5 style="color: #444">city: </h5><p style="font-size: 14px; color: #444">' + city + '</p><h5 style="color: #444"><strong>details: </strong></h5><p style="font-size: 14px; color: #444">' + details + '</p>');
         infowindow.setPosition(event.feature.getGeometry().get());
         infowindow.setOptions({
             pixelOffset: new google.maps.Size(0, -30)
@@ -147,14 +140,14 @@ function init() {
     });
 }
 
-
-
 function refreshData() {
     var bound = map.getBounds().getCenter();
-    var lat = bound.lat();
-    var lng = bound.lng();
-    map.data.loadGeoJson('http://jh2015.deneb.uberspace.de/api.php?lng=' + lng + '&lat=' + lat);
+    var geoString = 'http://jh2015.deneb.uberspace.de/api.php?lng=' + bound.lat() + '&lat=' + bound.lng();
+    console.log(geoString);
+    console.log(map.data.loadGeoJson(geoString));
+    map.data.loadGeoJson(geoString);
 }
+
 
 function address(e) {
     geocodeAddress(geocoder, map);
