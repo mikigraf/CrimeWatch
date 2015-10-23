@@ -6,7 +6,7 @@
 
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function () {
-    if ($(".navbar").offset().top > 50) {
+    if ($(".navbar").offset().top > 30) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
@@ -61,7 +61,7 @@ function init() {
     var imgShooting = 'img/shooting.png';
     var imgTheft = 'img/theft.png';
     var imgVandalism = 'img/vandalism.png';
-    defaultIcon = 'img/map-marker-dark.png'
+    defaultIcon = 'img/map-marker-dark.png';
     map.data.setStyle(function (feature) {
             var type = feature.getProperty('type');
             switch (type) {
