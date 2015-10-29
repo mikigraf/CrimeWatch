@@ -1,6 +1,6 @@
 <?php
-if(isset($_GET['lat'])) $lng = $_GET['lat'];
-if(isset($_GET['lng'])) $lat = $_GET['lng'];
+if(isset($_GET['lat'])) $lng = (double)$_GET['lat'];
+if(isset($_GET['lng'])) $lat = (double)$_GET['lng'];
 
 $db = new mysqli('localhost', 'jh2015', 'aesheiC3aidie3ku', 'jh2015');
 
